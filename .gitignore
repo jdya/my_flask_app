@@ -1,0 +1,5 @@
+# .gitignore 파일 생성
+echo "myenv/" >> .gitignore
+echo "__pycache__/" >> .gitignore
+echo "*.pyc" >> .gitignore
+echo "*.pyo" >> .gitignore
