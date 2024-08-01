@@ -1,10 +1,12 @@
-# app.py 파일 생성
-from flask import Flask
+from flask import Flask, render_template
 from flask_sqlalchemy import SQLAlchemy
+from flask_bootstrap import Bootstrap
 
 app = Flask(__name__)
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///site.db'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
+
+bootstrap = Bootstrap(app)
 db = SQLAlchemy(app)
 
 class User(db.Model):
@@ -17,7 +19,7 @@ class User(db.Model):
 
 @app.route('/')
 def hello():
-    return "Hello, Flask!, 안녕? 정대영!"
+    return render_template('index.html')
 
 if __name__ == '__main__':
     app.run(debug=True)

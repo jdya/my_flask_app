@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link href="{{ url_for('bootstrap.static', filename='css/bootstrap.min.css') }}" rel="stylesheet">
+
+    <title>Hello, Flask!</title>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Hello, Flask!, 안녕? 정대영!</h1>
+    </div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="{{ url_for('bootstrap.static', filename='js/bootstrap.min.js') }}"></script>
+  </body>
+</html>
